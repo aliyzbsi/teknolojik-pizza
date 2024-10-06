@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-function HamurKalinligi({ hamurSecenekleri }) {
-  const [selectedOption, setSelectedOption] = useState("");
+function HamurKalinligi({
+  hamurSecenekleri,
+  hamurKalinligi,
+  setHamurKalinligi,
+}) {
+  // Varsayılan olarak ilk hamur seçeneğini ayarla
+  useEffect(() => {
+    if (!hamurKalinligi) {
+      setHamurKalinligi(hamurSecenekleri[0]);
+    }
+  }, [hamurSecenekleri, hamurKalinligi, setHamurKalinligi]);
+
   const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
+    const value = event.target.value;
+    setHamurKalinligi(value);
+    console.log("hamur kalınlığı: ", value);
   };
+
   return (
     <div className="flex flex-col items-center">
       <label htmlFor="options" className="font-bold pb-4">
@@ -12,20 +25,16 @@ function HamurKalinligi({ hamurSecenekleri }) {
       </label>
       <select
         id="options"
-        value={selectedOption}
+        value={hamurKalinligi}
         onChange={handleSelectChange}
         className="border border-gray-300 rounded-lg p-2"
       >
-        <option value="" disabled>
-          Hamur Kalınlığı
-        </option>
         {hamurSecenekleri.map((hamur, index) => (
-          <option key={index} name="hamurSecimi" value={hamur}>
+          <option key={index} value={hamur}>
             {hamur}
           </option>
         ))}
       </select>
-      <p className="mt-2">Selected: {selectedOption}</p>
     </div>
   );
 }

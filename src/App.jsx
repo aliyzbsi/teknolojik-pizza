@@ -7,7 +7,7 @@ function App() {
     <div className="m-0 p-0 h-screen ">
       <Switch>
         <Route path="/" component={Header} exact />
-        <Route path="/order" component={Order} />
+        <Route path="/order/:id" component={Order} />
       </Switch>
     </div>
   );

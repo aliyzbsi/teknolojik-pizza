@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 function PizzaInfo({
   isim,
   fiyat,
-  pizzaAciklaması,
+  pizzaAciklamasi,
   pizzaId,
   puanOrtalaması,
   puanVerenSayisi,
 }) {
-  const [puan, setPuan] = useState(0);
+  /*const [puan, setPuan] = useState(0);
   const [puanVerenler, setPuanVerenler] = useState(0);
   const [verilenPuan, setVerilenPuan] = useState(null);
 
-  useEffect(() => {
+ useEffect(() => {
     axios
       .get(`http://localhost:3000/pizzas/${pizzaId}`)
       .then((response) => {
@@ -24,7 +24,7 @@ function PizzaInfo({
         setPuanVerenler(puanVerenler);
       })
       .catch((error) => console.error("API hatası:", error));
-  }, [pizzaId]);
+  }, [pizzaId]);*/
 
   return (
     <div className="flex flex-col gap-4">
@@ -36,7 +36,7 @@ function PizzaInfo({
           <p className="text-base">{puanVerenSayisi}</p>
         </div>
       </div>
-      <div>{pizzaAciklaması}</div>
+      <div>{pizzaAciklamasi}</div>
     </div>
   );
 }

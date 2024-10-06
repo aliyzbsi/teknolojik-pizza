@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 function Header() {
   const history = useHistory();
+
   return (
     <div className=" flex flex-col  h-screen">
       <div
@@ -13,6 +15,7 @@ function Header() {
       >
         <div className="flex flex-col items-center justify-center m-10 p-6 gap-10">
           <img src="Assets/Iteration-1-assets/logo.svg" alt="" />
+
           <p className="text-white text-7xl leading-tight-1 text-center font-sans">
             KOD ACIKTIRIR <br />
             PİZZA, DOYURUR

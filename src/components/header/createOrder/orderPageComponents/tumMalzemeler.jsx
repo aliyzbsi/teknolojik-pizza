@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { FormGroup, Input, Label } from "reactstrap";
+import { FormFeedback, FormGroup, Input, Label } from "reactstrap";
+
+const errorMessage = {
+  ondanFazlaHatasi: "En Fazla 10 Malzeme Seçebilirsiniz !",
+  dorttenAzHatasi: "En Az 4 Malzeme Olmalı",
+};
 
 function TumMalzemeler({
   tumMalzemeler,
@@ -7,16 +12,26 @@ function TumMalzemeler({
   selectedMalzemeler,
   setSelectedMalzemeler,
 }) {
+  const [error, setError] = useState("");
+
   useEffect(() => {
     setSelectedMalzemeler(varsayilanMalzemeler);
   }, [varsayilanMalzemeler]);
 
+  useEffect(() => {
+    if (selectedMalzemeler.length >= 10) {
+      setError(errorMessage.ondanFazlaHatasi);
+    } else if (selectedMalzemeler.length < 4) {
+      setError(errorMessage.dorttenAzHatasi);
+    } else {
+      setError("");
+    }
+  }, [selectedMalzemeler]);
+
   const handleCheckboxChange = (event, eklenenMalzeme) => {
     if (event.target.checked) {
-      if (selectedMalzemeler.length >= 4 && selectedMalzemeler.length <= 10) {
+      if (selectedMalzemeler.length < 10) {
         setSelectedMalzemeler([...selectedMalzemeler, eklenenMalzeme]);
-      } else {
-        alert("En az 4, en fazla 10 malzeme seçebilirsiniz.");
       }
     } else {
       setSelectedMalzemeler(
@@ -31,6 +46,7 @@ function TumMalzemeler({
         <p className="font-bold text-xl">Ek Malzemeler</p>
         <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
       </div>
+      {error && <p className="text-red-600">{error}</p>}
       <div className="grid grid-cols-3 gap-4 mt-4">
         {tumMalzemeler.map((malzeme, index) => (
           <FormGroup check key={index}>
@@ -39,6 +55,7 @@ function TumMalzemeler({
               type="checkbox"
               checked={selectedMalzemeler.includes(malzeme)}
               onChange={(e) => handleCheckboxChange(e, malzeme)}
+              invalid={!!error}
             />
             <Label check>{malzeme}</Label>
           </FormGroup>
