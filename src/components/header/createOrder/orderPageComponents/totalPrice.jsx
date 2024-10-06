@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-function TotalPrice({ price, selectedMalzemeler, varsayilanMalzemeler }) {
-  const [adet, setAdet] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0); // Toplam fiyat için yeni state
-
+function TotalPrice({
+  price,
+  selectedMalzemeler,
+  varsayilanMalzemeler,
+  adet,
+  setAdet,
+  totalPrice,
+  setTotalPrice,
+  siparisVerSubmit,
+  boyut,
+  musteriIsim,
+  hamurKalinligi,
+}) {
   useEffect(() => {
     const selectedCount = selectedMalzemeler.filter(
       (malzeme) => !varsayilanMalzemeler.includes(malzeme)
@@ -13,12 +22,19 @@ function TotalPrice({ price, selectedMalzemeler, varsayilanMalzemeler }) {
     setTotalPrice(bill);
   }, [adet, selectedMalzemeler, price, varsayilanMalzemeler]);
 
+  const isButtonDisabled =
+    !boyut ||
+    selectedMalzemeler.length < 4 ||
+    musteriIsim.length < 3 ||
+    !hamurKalinligi;
+
   return (
     <div>
-      <div className="flex flex-col sm:flex-row justify-between mt-4 ">
-        <div className="flex-1 flex jus items-center gap-2">
+      <div className="flex flex-col sm:flex-row items-center mt-4 md:justify-center ">
+        <div className="flex-1 flex jus items-center gap-2 ">
           <button
             onClick={() => (adet > 0 ? setAdet(adet - 1) : setAdet(adet))}
+            disabled={adet <= 1}
             className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-600"
           >
             -
@@ -52,7 +68,12 @@ function TotalPrice({ price, selectedMalzemeler, varsayilanMalzemeler }) {
           </div>
 
           <div className="flex justify-between mt-4 sm:mt-0">
-            <button className="w-[100%] bg-yellow-400 text-black py-3 rounded-lg hover:bg-yellow-500 transition duration-300">
+            <button
+              type="button"
+              onClick={siparisVerSubmit}
+              disabled={isButtonDisabled}
+              className="w-[100%] bg-yellow-400 text-black py-3 rounded-lg hover:bg-yellow-500 transition duration-300"
+            >
               Sipariş Ver
             </button>
           </div>

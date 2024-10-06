@@ -1,40 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Select from "react-select";
+
+const errorMessage = "Hamur Seçimi Yapmak Zorunludur !";
 
 function HamurKalinligi({
   hamurSecenekleri,
   hamurKalinligi,
   setHamurKalinligi,
 }) {
-  // Varsayılan olarak ilk hamur seçeneğini ayarla
+  const [error, setError] = useState("");
+
   useEffect(() => {
-    if (!hamurKalinligi) {
-      setHamurKalinligi(hamurSecenekleri[0]);
+    if (!hamurKalinligi && hamurSecenekleri.length > 0) {
+      setError(errorMessage);
+    } else {
+      setError("");
     }
   }, [hamurSecenekleri, hamurKalinligi, setHamurKalinligi]);
 
-  const handleSelectChange = (event) => {
-    const value = event.target.value;
-    setHamurKalinligi(value);
-    console.log("hamur kalınlığı: ", value);
+  const handleSelectChange = (selectedOption) => {
+    setHamurKalinligi(selectedOption.value);
+    console.log("hamur kalınlığı: ", selectedOption.value);
   };
+
+  // Select için seçenekleri dönüştürme
+  const options = hamurSecenekleri.map((hamur) => ({
+    value: hamur,
+    label: hamur,
+  }));
 
   return (
     <div className="flex flex-col items-center">
       <label htmlFor="options" className="font-bold pb-4">
         Hamur Seç <span className="text-red-600">*</span>
       </label>
-      <select
+
+      <Select
         id="options"
-        value={hamurKalinligi}
+        value={options.find((option) => option.value === hamurKalinligi)} // Seçilen değeri bulma
         onChange={handleSelectChange}
-        className="border border-gray-300 rounded-lg p-2"
-      >
-        {hamurSecenekleri.map((hamur, index) => (
-          <option key={index} value={hamur}>
-            {hamur}
-          </option>
-        ))}
-      </select>
+        options={options}
+        placeholder="Seçiniz..."
+        className="w-full "
+      />
+      {error && <p className="text-red-600">{error}</p>}
     </div>
   );
 }

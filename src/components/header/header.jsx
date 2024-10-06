@@ -21,7 +21,7 @@ function Header() {
             PİZZA, DOYURUR
           </p>
           <button
-            onClick={() => history.push("/order")}
+            onClick={() => history.push("/order/1")}
             className="rounded-full font-barlow font-medium bg-yellow-400 py-2.5 px-12 hover:bg-red-700 hover:text-white"
           >
             ACIKTIM
