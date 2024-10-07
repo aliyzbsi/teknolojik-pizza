@@ -46,14 +46,23 @@ function Order() {
     musteriIsim: "",
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (validateForm()) {
-      siparisVerSubmit();
+      try {
+        await siparisVerSubmit();
+      } catch (error) {
+        console.error("Sipariş gönderim hatası:", error);
+        toast.error("Sipariş gönderiminde bir hata oluştu.");
+      }
     }
   };
+  const musteriChange = (event) => {
+    const value = event.target.value;
+    setMusteriIsim(value);
 
+    validateForm();
+  };
   const validateForm = () => {
     let hasError = false;
 
@@ -77,15 +86,15 @@ function Order() {
   const siparisVerSubmit = async () => {
     const yeniSiparis = {
       isim: pizzaIsmi,
-      hamurKalinligi,
-      boyut,
+      hamurKalinligi: hamurKalinligi,
+      boyut: boyut,
       malzemeler: selectedMalzemeler,
-      musteriIsim,
-      siparisNotu,
+      musteriIsim: musteriIsim,
+      siparisNotu: siparisNotu,
       fiyat: totalPrice,
-      adet,
+      adet: adet,
     };
-
+    setOrderDetails(yeniSiparis);
     try {
       const response = await axios.post(
         "http://localhost:3000/orders",
@@ -98,7 +107,7 @@ function Order() {
       });
 
       setTimeout(() => {
-        history.push("/siparis-detaylari");
+        history.push("/siparis-detaylari", { orderDetails: yeniSiparis });
       }, 3000);
     } catch (error) {
       console.error("Sipariş gönderim hatası:", error);
@@ -117,17 +126,6 @@ function Order() {
       setPizzaIsmi(response.data.isim);
     } catch (error) {
       console.error("Sipariş gönderim hatası:", error);
-    }
-  };
-
-  const musteriChange = (event) => {
-    const value = event.target.value;
-    setMusteriIsim(value);
-
-    if (value.length < 3) {
-      setError((prev) => ({ ...prev, musteriIsim: errorMessages.musteriIsim }));
-    } else {
-      setError((prev) => ({ ...prev, musteriIsim: "" }));
     }
   };
 
