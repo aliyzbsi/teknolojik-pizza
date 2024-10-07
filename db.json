@@ -3,25 +3,11 @@
     {
       "id": "1",
       "isim": "Position Absolute Acı Pizza",
-      "varsayilanMalzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
+      "varsayilanMalzemeler": ["Pepperoni", "Sosis", "Mısır", "Sucuk", "Biber"],
       "pizzaAciklamasi": "Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.",
       "fiyat": 85.5,
-      "boyutSecenekleri": [
-        "Küçük",
-        "Orta",
-        "Büyük"
-      ],
-      "hamurSecenekleri": [
-        "İnce",
-        "Normal",
-        "Kalın"
-      ],
+      "boyutSecenekleri": ["Küçük", "Orta", "Büyük"],
+      "hamurSecenekleri": ["İnce", "Normal", "Kalın"],
       "ekstraMalzemeFiyat": 5,
       "tumMalzemeler": [
         "Pepperoni",
@@ -45,46 +31,16 @@
     {
       "id": "2",
       "isim": "Başka Bir Pizza",
-      "varsayilanMalzemeler": [
-        "Sucuk",
-        "Soğan"
-      ],
+      "varsayilanMalzemeler": ["Sucuk", "Soğan"],
       "pizzaAciklamasi": "Başka bir pizza açıklaması.",
       "fiyat": 90,
-      "boyutSecenekleri": [
-        "Küçük",
-        "Orta"
-      ],
-      "hamurSecenekleri": [
-        "İnce"
-      ],
+      "boyutSecenekleri": ["Küçük", "Orta"],
+      "hamurSecenekleri": ["İnce"],
       "ekstraMalzemeFiyat": 6,
-      "tumMalzemeler": [
-        "Sucuk",
-        "Soğan",
-        "Tavuk Izgara"
-      ],
+      "tumMalzemeler": ["Sucuk", "Soğan", "Tavuk Izgara"],
       "puan": 4.2,
       "puanVerenSayisi": 150
     }
   ],
-  "orders": [
-    {
-      "id": "1b48",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Orta",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "Ali Yüzbaşı",
-      "siparisNotu": "dsafasfsa",
-      "fiyat": 256.5,
-      "adet": 3
-    }
-  ]
+  "orders": []
 }

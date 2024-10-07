@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 function TotalPrice({
   price,
   selectedMalzemeler,
@@ -76,6 +78,7 @@ function TotalPrice({
             >
               Sipariş Ver
             </button>
+            <ToastContainer />
           </div>
         </div>
       </div>

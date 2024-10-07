@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import "./order.css";
 import { Form, FormFeedback, FormGroup, Input, Label } from "reactstrap";
 import axios from "axios";
+
 import Boyutlar from "./orderPageComponents/boyutlar";
 import HamurKalinligi from "./orderPageComponents/hamurKalinligi";
 import TumMalzemeler from "./orderPageComponents/tumMalzemeler";
 import PizzaInfo from "./orderPageComponents/pizzaInfo";
-import logo from "../../../../Assets/Iteration-1-assets/logo.svg";
+
 import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import TotalPrice from "./orderPageComponents/totalPrice";
+import { toast } from "react-toastify";
+import OrderHeader from "./orderPageComponents/orderHeader";
 
 const errorMessages = {
   musteriIsim: "İsminiz 3 harften kısa olamaz !",
@@ -20,7 +23,7 @@ const errorMessages = {
 function Order() {
   const { id } = useParams();
   const history = useHistory();
-  const [pizzaIsmi, setPizzaIsmı] = useState("");
+  const [pizzaIsmi, setPizzaIsmi] = useState("");
   const [selectedMalzemeler, setSelectedMalzemeler] = useState([]);
   const [hamurKalinligi, setHamurKalinligi] = useState();
   const [boyut, setBoyut] = useState();
@@ -41,6 +44,7 @@ function Order() {
     fiyat: 0,
     musteriIsim: "",
   });
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!isNewOrder) {
@@ -59,13 +63,21 @@ function Order() {
       fiyat: totalPrice,
       adet: adet,
     };
-
     try {
       const response = await axios.post(
         "http://localhost:3000/orders",
         yeniSiparis
       );
       setOrderDetails(response.data);
+      toast.success("Sipariş detayları ekranına yönlendiriliyorsunuz!", {
+        position: "top-right",
+        autoClose: 3000, // 3 saniye sonra kapanır
+      });
+
+      // 3 saniye sonra yönlendirme
+      setTimeout(() => {
+        history.push("/siparis-detaylari"); // Yönlendirmek istediğin sayfa
+      }, 3000);
     } catch (error) {
       console.log("error");
     }
@@ -84,6 +96,7 @@ function Order() {
       setError((prevError) => ({ ...prevError, musteriIsim: "" }));
     }
   }, [musteriIsim]);
+
   useEffect(() => {
     getAllPizzas();
   }, [id]);
@@ -92,15 +105,12 @@ function Order() {
       const response = await axios.get(`http://localhost:3000/pizzas/${id}`);
       console.log(response.data);
       setPizza(response.data);
-      setPizzaIsmı(response.data.isim);
+      setPizzaIsmi(response.data.isim);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleChange = () => {
-    history.push("/");
-  };
   const musteriChange = (event) => {
     const value = event.target.value;
     setMusteriIsım(value);
@@ -114,20 +124,7 @@ function Order() {
 
   return (
     <div>
-      <section className="bg-red-700 flex flex-col items-center pt-8">
-        <div className="flex flex-col items-center mx-4">
-          <div>
-            <img src={logo} alt="Logo" />
-          </div>
-          <div className="flex gap-4 py-4 justify-start text-gray-300">
-            <button className="hover:text-white" onClick={handleChange}>
-              Anasayfa
-            </button>
-            <span>-</span>
-            <button className="text-white">Sipariş Oluştur</button>
-          </div>
-        </div>
-      </section>
+      <OrderHeader />
       <Form onSubmit={handleSubmit}>
         {!pizza ? (
           <p>Yükleniyor...</p>
