@@ -48,6 +48,7 @@ function Header() {
           </p>
           <button
             onClick={routerHandler}
+            data-cy="aciktimButon"
             className="rounded-full font-barlow font-medium bg-yellow-400 py-2.5 px-12 hover:bg-red-700 hover:text-white"
           >
             ACIKTIM

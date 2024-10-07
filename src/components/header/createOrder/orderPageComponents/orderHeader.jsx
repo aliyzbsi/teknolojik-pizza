@@ -46,11 +46,16 @@ function OrderHeader() {
             <img src={logo} alt="Logo" />
           </div>
           <div className="flex gap-4 py-4 justify-start text-gray-300">
-            <button className="hover:text-white" onClick={handleAnasayfa}>
+            <button
+              className="hover:text-white"
+              data-cy="anasayfaRouter"
+              onClick={handleAnasayfa}
+            >
               Anasayfa
             </button>
             <span>-</span>
             <button
+              data-cy="siparisOlusturRouter"
               onClick={handleSiparis}
               className={`text-white ${
                 isOrderPage ? "opacity-50 cursor-not-allowed" : ""

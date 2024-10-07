@@ -18,6 +18,7 @@ import OrderHeader from "./orderPageComponents/orderHeader";
 
 const errorMessages = {
   musteriIsim: "İsminiz 3 harften kısa olamaz !",
+  boyut: "Lütfen bir boyut seçin!",
 };
 
 function Order() {
@@ -26,13 +27,13 @@ function Order() {
   const [pizzaIsmi, setPizzaIsmi] = useState("");
   const [selectedMalzemeler, setSelectedMalzemeler] = useState([]);
   const [hamurKalinligi, setHamurKalinligi] = useState();
-  const [boyut, setBoyut] = useState();
+  const [boyut, setBoyut] = useState("");
   const [pizza, setPizza] = useState(null);
-  const [error, setError] = useState(errorMessages);
-  const [musteriIsim, setMusteriIsım] = useState("");
+  const [error, setError] = useState({});
+  const [musteriIsim, setMusteriIsim] = useState("");
   const [siparisNotu, setSiparisNotu] = useState("");
   const [adet, setAdet] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0); // Toplam fiyat için yeni state
+  const [totalPrice, setTotalPrice] = useState(0);
   const [isNewOrder, setIsNewOrder] = useState(false);
   const [orderDetails, setOrderDetails] = useState({
     isim: "",
@@ -47,22 +48,44 @@ function Order() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!isNewOrder) {
-      // Eğer yeni sipariş değilse
+    // Hataları kontrol et
+    if (validateForm()) {
       siparisVerSubmit();
     }
   };
+
+  const validateForm = () => {
+    let hasError = false;
+
+    if (!musteriIsim || musteriIsim.length < 3) {
+      setError((prev) => ({ ...prev, musteriIsim: errorMessages.musteriIsim }));
+      hasError = true;
+    } else {
+      setError((prev) => ({ ...prev, musteriIsim: "" }));
+    }
+
+    if (!boyut) {
+      setError((prev) => ({ ...prev, boyut: errorMessages.boyut }));
+      hasError = true;
+    } else {
+      setError((prev) => ({ ...prev, boyut: "" }));
+    }
+
+    return !hasError;
+  };
+
   const siparisVerSubmit = async () => {
     const yeniSiparis = {
       isim: pizzaIsmi,
-      hamurKalinligi: hamurKalinligi,
-      boyut: boyut,
+      hamurKalinligi,
+      boyut,
       malzemeler: selectedMalzemeler,
-      musteriIsim: musteriIsim,
-      siparisNotu: siparisNotu,
+      musteriIsim,
+      siparisNotu,
       fiyat: totalPrice,
-      adet: adet,
+      adet,
     };
+
     try {
       const response = await axios.post(
         "http://localhost:3000/orders",
@@ -71,39 +94,24 @@ function Order() {
       setOrderDetails(response.data);
       toast.success("Sipariş detayları ekranına yönlendiriliyorsunuz!", {
         position: "top-right",
-        autoClose: 3000, // 3 saniye sonra kapanır
+        autoClose: 3000,
       });
 
-      // 3 saniye sonra yönlendirme
       setTimeout(() => {
-        history.push("/siparis-detaylari"); // Yönlendirmek istediğin sayfa
+        history.push("/siparis-detaylari");
       }, 3000);
     } catch (error) {
       console.log("error");
     }
   };
-  useEffect(() => {
-    console.log(orderDetails);
-  }, [orderDetails]);
-  useEffect(() => {
-    setIsNewOrder(true);
-  }, [adet]);
-
-  useEffect(() => {
-    if (musteriIsim && musteriIsim.length < 4) {
-      setError({ ...error, musteriIsim: errorMessages.musteriIsim });
-    } else {
-      setError((prevError) => ({ ...prevError, musteriIsim: "" }));
-    }
-  }, [musteriIsim]);
 
   useEffect(() => {
     getAllPizzas();
   }, [id]);
+
   const getAllPizzas = async () => {
     try {
       const response = await axios.get(`http://localhost:3000/pizzas/${id}`);
-      console.log(response.data);
       setPizza(response.data);
       setPizzaIsmi(response.data.isim);
     } catch (error) {
@@ -113,12 +121,12 @@ function Order() {
 
   const musteriChange = (event) => {
     const value = event.target.value;
-    setMusteriIsım(value);
+    setMusteriIsim(value);
 
     if (value.length < 3) {
-      setError({ ...error, musteriIsim: errorMessages.musteriIsim });
+      setError((prev) => ({ ...prev, musteriIsim: errorMessages.musteriIsim }));
     } else {
-      setError({ ...error, musteriIsim: "" });
+      setError((prev) => ({ ...prev, musteriIsim: "" }));
     }
   };
 

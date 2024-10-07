@@ -71,6 +71,7 @@ function TotalPrice({
 
           <div className="flex justify-between mt-4 sm:mt-0">
             <button
+              data-cy="submitButton"
               type="button"
               onClick={siparisVerSubmit}
               disabled={isButtonDisabled}

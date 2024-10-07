@@ -46,7 +46,11 @@ function TumMalzemeler({
         <p className="font-bold text-xl">Ek Malzemeler</p>
         <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
       </div>
-      {error && <p className="text-red-600">{error}</p>}
+      {error && (
+        <p className="hata-mesaji" style={{ color: "red" }}>
+          {error}
+        </p>
+      )}
       <div className="grid grid-cols-3 gap-4 mt-4">
         {tumMalzemeler.map((malzeme, index) => (
           <FormGroup check key={index}>
