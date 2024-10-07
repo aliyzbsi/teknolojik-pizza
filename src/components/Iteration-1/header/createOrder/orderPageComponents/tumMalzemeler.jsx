@@ -61,7 +61,9 @@ function TumMalzemeler({
               onChange={(e) => handleCheckboxChange(e, malzeme)}
               invalid={!!error}
             />
-            <Label check>{malzeme}</Label>
+            <Label htmlFor={`malzeme-${index}`} check>
+              {malzeme}
+            </Label>
           </FormGroup>
         ))}
       </div>

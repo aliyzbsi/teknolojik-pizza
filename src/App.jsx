@@ -1,9 +1,10 @@
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import Header from "./components/header/header";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-import Order from "./components/header/createOrder/Order";
-import SiparisDetaylari from "./components/header/siparisDetaylari/siparisDetaylari";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SiparisDetaylari from "./components/Iteration-1/header/siparisDetaylari/siparisDetaylari";
+import Header from "./components/Iteration-1/header/header";
+import Order from "./components/Iteration-1/header/createOrder/Order";
+
 function App() {
   return (
     <div className="m-0 p-0 h-screen ">

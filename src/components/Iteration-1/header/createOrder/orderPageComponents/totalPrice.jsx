@@ -10,16 +10,18 @@ function TotalPrice({
   setAdet,
   totalPrice,
   setTotalPrice,
-  siparisVerSubmit,
+  handleSubmit,
   boyut,
   musteriIsim,
   hamurKalinligi,
 }) {
+  const [malzemeParasi, setMalzemeParasi] = useState(0);
+
   useEffect(() => {
     const selectedCount = selectedMalzemeler.filter(
       (malzeme) => !varsayilanMalzemeler.includes(malzeme)
     ).length;
-
+    setMalzemeParasi(selectedCount);
     const bill = price * adet + selectedCount * 5;
     setTotalPrice(bill);
   }, [adet, selectedMalzemeler, price, varsayilanMalzemeler]);
@@ -35,6 +37,7 @@ function TotalPrice({
       <div className="flex flex-col sm:flex-row items-center mt-4 md:justify-center ">
         <div className="flex-1 flex jus items-center gap-2 ">
           <button
+            type="button"
             onClick={() => (adet > 0 ? setAdet(adet - 1) : setAdet(adet))}
             disabled={adet <= 1}
             className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-600"
@@ -45,6 +48,7 @@ function TotalPrice({
             {adet}
           </span>
           <button
+            type="button"
             onClick={() => setAdet(adet + 1)}
             className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-600"
           >
@@ -59,7 +63,7 @@ function TotalPrice({
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between w-full">
                   <p className="text-lg font-medium">Seçimler</p>
-                  <p className="text-lg font-medium">{totalPrice}₺</p>
+                  <p className="text-lg font-medium">{malzemeParasi * 5}₺</p>
                 </div>
                 <div className="text-red-700 flex justify-between w-full font-bold">
                   <p>Toplam</p>
@@ -72,8 +76,12 @@ function TotalPrice({
           <div className="flex justify-between mt-4 sm:mt-0">
             <button
               data-cy="submitButton"
-              type="button"
-              onClick={siparisVerSubmit}
+              type="submit"
+              onClick={(e) => {
+                if (!isButtonDisabled) {
+                  handleSubmit(e);
+                }
+              }}
               disabled={isButtonDisabled}
               className="w-[100%] bg-yellow-400 text-black py-3 rounded-lg hover:bg-yellow-500 transition duration-300"
             >

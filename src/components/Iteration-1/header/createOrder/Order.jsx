@@ -48,7 +48,7 @@ function Order() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Hataları kontrol et
+
     if (validateForm()) {
       siparisVerSubmit();
     }
@@ -101,7 +101,8 @@ function Order() {
         history.push("/siparis-detaylari");
       }, 3000);
     } catch (error) {
-      console.log("error");
+      console.error("Sipariş gönderim hatası:", error);
+      toast.error("Sipariş gönderiminde bir hata oluştu.");
     }
   };
 
@@ -115,7 +116,7 @@ function Order() {
       setPizza(response.data);
       setPizzaIsmi(response.data.isim);
     } catch (error) {
-      console.log(error);
+      console.error("Sipariş gönderim hatası:", error);
     }
   };
 
@@ -205,7 +206,7 @@ function Order() {
                   setAdet={setAdet}
                   totalPrice={totalPrice}
                   setTotalPrice={setTotalPrice}
-                  siparisVerSubmit={siparisVerSubmit}
+                  handleSubmit={handleSubmit}
                   musteriIsim={musteriIsim}
                   boyut={boyut}
                   hamurKalinligi={hamurKalinligi}

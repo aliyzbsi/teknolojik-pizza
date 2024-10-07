@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import logo from "../../../../../Assets/Iteration-1-assets/logo.svg";
+import logo from "../../../../../../Assets/Iteration-1-assets/logo.svg";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function OrderHeader() {
