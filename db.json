@@ -252,163 +252,10 @@
   ],
   "orders": [
     {
-      "id": "315b",
+      "id": "46d5",
       "isim": "Position Absolute Acı Pizza",
       "hamurKalinligi": "Normal",
-      "boyut": "Orta",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "zkEra",
-      "siparisNotu": "asffsfsafs",
-      "fiyat": 85.5,
-      "adet": 2
-    },
-    {
-      "id": "83da",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Orta",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "zkEra",
-      "siparisNotu": "asffsfsafs",
-      "fiyat": 171,
-      "adet": 3
-    },
-    {
-      "id": "1865",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Orta",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "dsafasfsfas",
-      "siparisNotu": "fsafsafsfas",
-      "fiyat": 256.5,
-      "adet": 3
-    },
-    {
-      "id": "97eb",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Küçük",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "dasasfasafs",
-      "siparisNotu": "fsafsafas",
-      "fiyat": 256.5,
-      "adet": 3
-    },
-    {
-      "id": "75a4",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Büyük",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber",
-        "Soğan"
-      ],
-      "musteriIsim": "erdem.guntay@wit.com.tr",
-      "siparisNotu": "",
-      "fiyat": 261.5,
-      "adet": 3
-    },
-    {
-      "id": "4833",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Büyük",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "fsafsfsasfa",
-      "siparisNotu": "fsafsfsaaf",
-      "fiyat": 256.5,
-      "adet": 3
-    },
-    {
-      "id": "d9e8",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Kalın",
-      "boyut": "Büyük",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "dsafsfafsa",
-      "siparisNotu": "fsaafafasfasfas",
-      "fiyat": 256.5,
-      "adet": 3
-    },
-    {
-      "id": "d084",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "İnce",
-      "boyut": "Büyük",
-      "malzemeler": [
-        "Pepperoni",
-        "Mısır",
-        "Sucuk",
-        "Sosis"
-      ],
-      "musteriIsim": "fsafsfsafas",
-      "siparisNotu": "",
-      "fiyat": 855,
-      "adet": 10
-    },
-    {
-      "id": "bf01",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Normal",
-      "boyut": "Büyük",
-      "malzemeler": [
-        "Pepperoni",
-        "Sosis",
-        "Mısır",
-        "Sucuk",
-        "Biber"
-      ],
-      "musteriIsim": "fsaffasfas",
-      "siparisNotu": "ffsafasafsafs",
-      "fiyat": 85.5,
-      "adet": 1
-    },
-    {
-      "id": "65e2",
-      "isim": "Position Absolute Acı Pizza",
-      "hamurKalinligi": "Kalın",
-      "boyut": "Büyük",
+      "boyut": "M",
       "malzemeler": [
         "Pepperoni",
         "Sosis",
@@ -416,16 +263,55 @@
         "Sucuk",
         "Biber",
         "Kanada Jambonu",
-        "Jalapeno",
-        "Parmesan Peyniri"
+        "Parmesan Peyniri",
+        "Kabak"
       ],
-      "musteriIsim": "Ali Yüzbaşı",
-      "siparisNotu": "ketçap mayonezzz",
+      "musteriIsim": "fsafasfsa",
+      "siparisNotu": "fsafsfsa",
+      "fiyat": 186,
+      "adet": 2
+    },
+    {
+      "id": "836c",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "M",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
+        "Biber",
+        "Kanada Jambonu",
+        "Domates"
+      ],
+      "musteriIsim": "ali",
+      "siparisNotu": "fsafsafas",
+      "fiyat": 266.5,
+      "adet": 3
+    },
+    {
+      "id": "e758",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "M",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
+        "Biber",
+        "Jalapeno",
+        "Kabak",
+        "Ananas"
+      ],
+      "musteriIsim": "Ahmett",
+      "siparisNotu": "",
       "fiyat": 271.5,
       "adet": 3
     },
     {
-      "id": "7cbe",
+      "id": "38bc",
       "isim": "Position Absolute Acı Pizza",
       "hamurKalinligi": "Normal",
       "boyut": "S",
@@ -434,14 +320,102 @@
         "Sosis",
         "Mısır",
         "Sucuk",
+        "Biber"
+      ],
+      "musteriIsim": "dsafasf",
+      "siparisNotu": "",
+      "fiyat": 171,
+      "adet": 2
+    },
+    {
+      "id": "8abe",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "L",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
         "Biber",
-        "Jalapeno",
+        "Soğan",
+        "Jalapeno"
+      ],
+      "musteriIsim": "Ali Yüzbaşı",
+      "siparisNotu": "Ketçap Mayonez Susam",
+      "fiyat": 181,
+      "adet": 2
+    },
+    {
+      "id": "60d9",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "L",
+      "malzemeler": [
+        "Pepperoni",
+        "Mısır",
+        "Sucuk",
+        "Kanada Jambonu",
+        "Domates",
+        "Sosis"
+      ],
+      "musteriIsim": "Ömer",
+      "siparisNotu": "",
+      "fiyat": 181,
+      "adet": 2
+    },
+    {
+      "id": "6f11",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "M",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
+        "Biber",
+        "Soğan"
+      ],
+      "musteriIsim": "Asir",
+      "siparisNotu": "",
+      "fiyat": 90.5,
+      "adet": 1
+    },
+    {
+      "id": "92e3",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "L",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
+        "Biber"
+      ],
+      "musteriIsim": "sasadas",
+      "siparisNotu": "",
+      "fiyat": 85.5,
+      "adet": 1
+    },
+    {
+      "id": "d5c5",
+      "isim": "Position Absolute Acı Pizza",
+      "hamurKalinligi": "Normal",
+      "boyut": "M",
+      "malzemeler": [
+        "Pepperoni",
+        "Sosis",
+        "Mısır",
+        "Sucuk",
+        "Biber",
         "Parmesan Peyniri"
       ],
-      "musteriIsim": "dasda",
-      "siparisNotu": "fasfsafasfsa",
-      "fiyat": 266.5,
-      "adet": 3
+      "musteriIsim": "dsafasfas",
+      "siparisNotu": "",
+      "fiyat": 90.5,
+      "adet": 1
     }
   ]
 }

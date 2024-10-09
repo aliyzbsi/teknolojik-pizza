@@ -4,16 +4,16 @@ import MainHome from "./HomePageContent/MainHome";
 
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import OrderMain from "./OrderPizzaPage/OrderMain";
-import axios from "axios";
+
+import OrderSummary from "./OrderSummary/OrderSummary";
 
 function MainComponent() {
-  const [pizzaData, setPizzaData] = useState(null);
-
   return (
     <div>
       <Switch>
         <Route path="/" component={MainHome} exact />
         <Route path="/order/:pizzaId" component={OrderMain} />
+        <Route path="/order-summary" component={OrderSummary} />
       </Switch>
     </div>
   );

@@ -1,21 +1,66 @@
 import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import productImage from "../../../../../Assets/Iteration-2-aseets/pictures/form-banner.png";
+import { toast } from "react-toastify";
 function PizzaInfo({ selectedPizzaData }) {
   if (!selectedPizzaData) {
     return <div>Yükleniyor...</div>;
   }
+  const history = useHistory();
+  const isOrderPage = history.location.pathname.startsWith("/order"); // 'order/' sayfasında olup olmadığını kontrol eder
+
+  const handleAnasayfa = () => {
+    toast.success("Anasayfa'ya yönlendiriliyorsunuz", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+
+    setTimeout(() => {
+      history.push("/");
+    }, 2000);
+  };
+
+  const handleSiparis = () => {
+    if (!isOrderPage) {
+      toast.success("Sipariş Sayfasına Yönlendiriliyorsunuz", {
+        position: "top-right",
+        autoClose: 2000,
+      });
+
+      setTimeout(() => {
+        history.goBack();
+      }, 2000);
+    } else {
+      toast.info("Zaten sipariş sayfasındasınız.", {
+        position: "top-right",
+        autoClose: 2000,
+      });
+    }
+  };
   return (
     <div>
       <section className="flex flex-col items-center bg-mainBgColor gap-10 font-barlow">
         <img src={productImage} alt="" />
         <div className="flex lg:w-144">
           <nav>
-            <Link to="/">Anasayfa</Link>
+            <button
+              className="hover:text-red-600"
+              data-cy="anasayfaRouter"
+              onClick={handleAnasayfa}
+            >
+              Anasayfa
+            </button>
             <span>-</span>
-            <Link to="/order" className="text-red-700">
+            <button
+              data-cy="siparisOlusturRouter"
+              onClick={handleSiparis}
+              className={`text-red-600 ${
+                isOrderPage ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              disabled={isOrderPage}
+            >
               Sipariş Oluştur
-            </Link>
+            </button>
           </nav>
         </div>
         <article className="flex flex-col lg:w-144 mb-4">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Label } from "reactstrap";
+import { FormGroup, Input, Label } from "reactstrap";
 
 const errorMessage = {
   ondanFazlaHatasi: "En Fazla 10 Malzeme Seçebilirsiniz !",
@@ -18,15 +18,28 @@ function AdditionalIngredients({
     setSelectedMalzemeler(varsayilanMalzemeler);
   }, [varsayilanMalzemeler, setSelectedMalzemeler]);
 
-  const handleCheckboxChange = (e, item) => {
+  useEffect(() => {
+    if (selectedMalzemeler.length >= 10) {
+      setError(errorMessage.ondanFazlaHatasi);
+    } else if (selectedMalzemeler.length < 4) {
+      setError(errorMessage.dorttenAzHatasi);
+    } else {
+      setError("");
+    }
+  }, [selectedMalzemeler]);
+
+  const handleCheckboxChange = (e, eklenen) => {
     const checked = e.target.checked;
-    setSelectedMalzemeler((prevSelected) => {
-      if (checked) {
-        return [...prevSelected, item];
-      } else {
-        return prevSelected.filter((malzeme) => malzeme !== item);
+
+    if (checked) {
+      if (selectedMalzemeler.length < 10) {
+        setSelectedMalzemeler([...selectedMalzemeler, eklenen]);
       }
-    });
+    } else {
+      setSelectedMalzemeler(
+        selectedMalzemeler.filter((item) => item !== eklenen)
+      );
+    }
   };
 
   return (
@@ -37,9 +50,14 @@ function AdditionalIngredients({
             <h1 className="font-semibold text-xl">Ek Malzemeler</h1>
             <p className="text-lg">En Fazla 10 malzeme seçebilirsiniz. 5₺ </p>
           </div>
+          {error && (
+            <p className="hata-mesaji" style={{ color: "red" }}>
+              {error}
+            </p>
+          )}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
             {tumMalzemeler.map((item, index) => (
-              <Form key={index} className="flex gap-2 items-center">
+              <FormGroup key={index} className="flex gap-2 items-center">
                 <Input
                   className="hidden"
                   id={`malzeme-${index}`}
@@ -66,7 +84,7 @@ function AdditionalIngredients({
                   </span>
                   {item}
                 </Label>
-              </Form>
+              </FormGroup>
             ))}
           </div>
         </div>

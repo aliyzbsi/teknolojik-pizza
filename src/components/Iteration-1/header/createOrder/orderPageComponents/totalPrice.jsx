@@ -35,7 +35,7 @@ function TotalPrice({
   return (
     <div>
       <div className="flex flex-col sm:flex-row items-center mt-4 md:justify-center ">
-        <div className="flex-1 flex jus items-center gap-2 ">
+        <div className="flex-1 flex items-center gap-2 ">
           <button
             type="button"
             onClick={() => (adet > 0 ? setAdet(adet - 1) : setAdet(adet))}

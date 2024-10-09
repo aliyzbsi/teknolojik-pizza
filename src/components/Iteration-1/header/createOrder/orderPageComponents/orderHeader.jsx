@@ -21,7 +21,6 @@ function OrderHeader() {
 
   const handleSiparis = () => {
     if (!isOrderPage) {
-      // Eğer 'order/' sayfasındaysa, işlem yapılmaz
       toast.success("Sipariş Sayfasına Yönlendiriliyorsunuz", {
         position: "top-right",
         autoClose: 2000,

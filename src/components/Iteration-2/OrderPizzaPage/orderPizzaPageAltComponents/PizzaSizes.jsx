@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function PizzaSizes({ pizzaSizes, selectedSize, setSelectedSize }) {
+const errorMessage = "Lütfen bir boyut seçin!";
+
+function PizzaSizes({
+  pizzaSizes,
+  selectedSize,
+  setSelectedSize,
+  error,
+  setError,
+}) {
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
   };
+
+  useEffect(() => {
+    if (!selectedSize) {
+      setError((prev) => ({
+        ...prev,
+        sizeHata: errorMessage,
+      }));
+    } else {
+      setError((prev) => ({
+        ...prev,
+        sizeHata: "",
+      }));
+    }
+  }, [selectedSize, setError]);
 
   return (
     <div>
@@ -21,12 +43,13 @@ function PizzaSizes({ pizzaSizes, selectedSize, setSelectedSize }) {
                 className={`flex items-center bg-mainBgColor text-black font-mono text-lg border-0 rounded-3xl py-2 px-3 cursor-pointer shadow-md relative ${
                   selectedSize === item ? "bg-selectedColor text-black" : ""
                 }`}
-                onClick={() => handleSizeSelect(item)} // Butona tıklandığında boyutu seç
+                onClick={() => handleSizeSelect(item)}
               >
                 <span>{item}</span>
               </button>
             ))}
           </div>
+          {error.sizeHata && <p className="text-red-600">{error.sizeHata}</p>}
         </div>
       </section>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { toast, ToastContainer } from "react-toastify";
 
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
@@ -9,13 +9,22 @@ function HomePage({ pizzaData, getAllPizzas }) {
   const orderPageRouter = () => {
     getAllPizzas();
     const pizzaId = 1;
-    history.push(`/order/${pizzaId}`);
+
+    toast.success("Sipariş detayları ekranına yönlendiriliyorsunuz!", {
+      position: "top-right",
+      autoClose: 4000, // Mesajın görünürlük süresini uzat
+    });
+
+    // Toast mesajının görünmesi için daha uzun bir süre bekle
+    setTimeout(() => {
+      history.push(`/order/${pizzaId}`);
+    }, 5000); // Yönlendirme için bekleme süresini uzat
   };
 
   return (
     <div className="flex flex-col h-screen ">
       <section
-        className="bg-center bg-cover bg-no-repeat h-full  "
+        className="bg-center bg-cover bg-no-repeat h-full"
         style={{
           backgroundImage: "url('Assets/Iteration-1-assets/home-banner.png')",
         }}
@@ -118,6 +127,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
           </nav>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }
