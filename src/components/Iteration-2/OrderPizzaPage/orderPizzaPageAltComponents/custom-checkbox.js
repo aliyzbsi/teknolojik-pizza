@@ -1,20 +1,24 @@
-import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+/*
+IT-2
 
-import "bootstrap/dist/css/bootstrap.min.css";
+<Switch>
+        <Route path="/*" component={MainComponent} exact />
+      </Switch>
+      <Footer /> 
+
+*/
+
+/* 
+IT-1
 import Header from "./components/Iteration-1/header/header";
 import Order from "./components/Iteration-1/header/createOrder/Order";
 import SiparisDetaylari from "./components/Iteration-1/header/siparisDetaylari/siparisDetaylari";
 
-function App() {
-  return (
-    <div className="m-0 p-0 h-screen ">
-      <Switch>
+
+   <Switch>
         <Route path="/" component={Header} exact />
         <Route path="/order/:id" component={Order} />
         <Route path="/siparis-detaylari" component={SiparisDetaylari} />
       </Switch>
-    </div>
-  );
-}
 
-export default App;
+      */

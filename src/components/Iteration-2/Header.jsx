@@ -1,7 +1,8 @@
+import logo from "../../../Assets/Iteration-1-assets/logo.svg";
 function Header() {
   return (
     <div className="w-[100vw] flex justify-center bg-mainColor p-10">
-      <img src="Assets/Iteration-1-assets/logo.svg" alt="page-logo" />
+      <img src={logo} alt="page-logo" />
     </div>
   );
 }

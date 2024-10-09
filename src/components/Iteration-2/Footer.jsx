@@ -8,14 +8,14 @@ function Footer() {
         {/* Logo ve Adres Bölümü */}
         <article className="flex flex-col items-start gap-10 text-center lg:text-left">
           <img
-            src="Assets/Iteration-2-aseets/footer/logo-footer.svg"
+            src="../../../Assets/Iteration-2-aseets/footer/logo-footer.svg"
             alt="logo-footer"
             className="h-30 lg:h-30"
           />
           <address className="flex flex-col gap-4">
             <div className="flex gap-2 items-center">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-1.png"
+                src="../../../Assets/Iteration-2-aseets/footer/icons/icon-1.png"
                 alt="location"
                 className="h-8 lg:h-8"
               />
@@ -27,7 +27,7 @@ function Footer() {
             </div>
             <div className="flex gap-2 items-center">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-2.png"
+                src="../../../Assets/Iteration-2-aseets/footer/icons/icon-2.png"
                 alt="mail"
                 className="h-8 lg:h-8"
               />
@@ -35,7 +35,7 @@ function Footer() {
             </div>
             <div className="flex gap-2 items-center">
               <img
-                src="Assets/Iteration-2-aseets/footer/icons/icon-3.png"
+                src="../../../Assets/Iteration-2-aseets/footer/icons/icon-3.png"
                 alt="phone"
                 className="h-8 lg:h-8"
               />
@@ -62,27 +62,27 @@ function Footer() {
           <h1 className="font-semibold">Instagram</h1>
           <div className="grid grid-cols-3 gap-2">
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-0.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-0.png"
               alt="insta-0"
             />
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-1.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-1.png"
               alt="insta-1"
             />
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-2.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-2.png"
               alt="insta-2"
             />
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-3.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-3.png"
               alt="insta-3"
             />
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-4.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-4.png"
               alt="insta-4"
             />
             <img
-              src="Assets/Iteration-2-aseets/footer/insta/li-5.png"
+              src="../../../Assets/Iteration-2-aseets/footer/insta/li-5.png"
               alt="insta-5"
             />
           </div>

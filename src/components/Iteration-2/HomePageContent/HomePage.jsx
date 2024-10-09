@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Ramen from "../../../../Assets/Iteration-2-aseets/icons/1.svg";
 
-function HomePage() {
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
+function HomePage({ pizzaData, getAllPizzas }) {
+  const history = useHistory();
+
+  const orderPageRouter = () => {
+    getAllPizzas();
+    const pizzaId = 1;
+    history.push(`/order/${pizzaId}`);
+  };
+
   return (
     <div className="flex flex-col h-screen ">
       <section
@@ -27,7 +36,10 @@ function HomePage() {
             </h1>
           </div>
           <div>
-            <button className="rounded-full font-barlow font-medium bg-yellow-400 py-2 px-6 md:px-10 lg:px-12 md:py-2.5 hover:bg-red-700 hover:text-white transition-all duration-300">
+            <button
+              onClick={orderPageRouter}
+              className="rounded-full font-barlow font-medium bg-yellow-400 py-2 px-6 md:px-10 lg:px-12 md:py-2.5 hover:bg-red-700 hover:text-white transition-all duration-300"
+            >
               ACIKTIM
             </button>
           </div>
