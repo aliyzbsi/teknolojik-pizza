@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         mainColor: "#CE2829", // Özel rengi buraya ekliyorsun
+        mainBgColor: "#FAF7F2",
+        selectedColor: "#FFEECC",
       },
       fontFamily: {
         satisfy: ["Satisfy", "cursive"],
