@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
 import logo from "../../../../public/Iteration-1-assets/logo.svg";
-import icon1 from "../../../../public/Iteration-2-aseets/icons/1.svg";
-import icon2 from "../../../../public/Iteration-2-aseets/icons/2.svg";
+
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
 
@@ -64,14 +63,22 @@ function HomePage({ pizzaData, getAllPizzas }) {
               to="#Ramen"
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
-              <img src={icon1} alt="ramen" className="w-6 h-6" />
+              <img
+                src="../../../../public/Iteration-2-aseets/icons/1.svg"
+                alt="ramen"
+                className="w-6 h-6"
+              />
               <span>YENİ! Kore</span>
             </Link>
             <Link
               to="#Pizza"
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
-              <img src={icon2} alt="pizza" className="w-6 h-6" />
+              <img
+                src="../../../../public/Iteration-2-aseets/icons/2.svg"
+                alt="pizza"
+                className="w-6 h-6"
+              />
               <span>Pizza</span>
             </Link>
             <Link
