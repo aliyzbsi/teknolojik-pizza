@@ -14,7 +14,7 @@ import { Form } from "reactstrap";
 import SupplyAndBill from "./orderPizzaPageAltComponents/SupplyAndBill";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import pizzas from "../../../pizzaInfo";
 const errorMessages = {
   consumerNameHata: "İsminiz 3 harften kısa olamaz!",
   sizeHata: "Lütfen bir boyut seçin!",
@@ -35,7 +35,19 @@ function OrderMain() {
   const [eklenenMalzemeSayisi, setEklenenMalzemeSayisi] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
+  const [orderForm, setOrderForm] = useState({
+    consumerName: "",
+    orderNote: "",
+    pizzaData: pizzas.find((pizza) => pizza.id === pizzaId), // Yerel pizza verisinden alınıyor
+    selectedSize: "",
+    hamurType: "",
+    selectedMalzemeler: [],
+    adet: 1,
+    eklenenMalzemeSayisi: 0,
+    totalPrice: 0,
+  });
+
+  /* useEffect(() => {
     const fetchPizzaData = async () => {
       try {
         const response = await axios.get(
@@ -47,6 +59,10 @@ function OrderMain() {
       }
     };
     fetchPizzaData();
+  }, [pizzaId]);*/
+  useEffect(() => {
+    const pizzaData = pizzas.find((pizza) => pizza.id === pizzaId);
+    setSelectedPizzaData(pizzaData || pizzas[0]);
   }, [pizzaId]);
 
   const validateForm = () => {
@@ -75,7 +91,7 @@ function OrderMain() {
     }
   };
 
-  const siparisVerSubmit = async () => {
+  /*  const siparisVerSubmit = async () => {
     const newOrder = {
       isim: selectedPizzaData.isim,
       hamurKalinligi: hamurType,
@@ -104,6 +120,31 @@ function OrderMain() {
       console.error("Sipariş gönderim hatası:", error);
       toast.error("Sipariş gönderiminde bir hata oluştu.");
     }
+  };
+*/
+
+  const siparisVerSubmit = () => {
+    const newOrder = {
+      isim: selectedPizzaData.isim,
+      hamurKalinligi: hamurType,
+      boyut: selectedSize,
+      malzemeler: selectedMalzemeler,
+      musteriIsim: consumerName,
+      siparisNotu: orderNote,
+      fiyat: totalPrice,
+      adet: adet,
+      eklenenMalzemeSayisi: eklenenMalzemeSayisi,
+    };
+
+    console.log("Sipariş Verildi:", newOrder);
+    toast.success("Sipariş başarılı!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+
+    setTimeout(() => {
+      history.push("/order-summary", { orderForm: newOrder });
+    }, 3000);
   };
 
   if (!selectedPizzaData) {
@@ -171,3 +212,14 @@ function OrderMain() {
 }
 
 export default OrderMain;
+
+/*
+
+ <AdditionalIngredients
+          selectedMalzemeler={selectedMalzemeler}
+          setSelectedMalzemeler={setSelectedMalzemeler}
+          tumMalzemeler={selectedPizzaData.tumMalzemeler}
+          varsayilanMalzemeler={selectedPizzaData.varsayilanMalzemeler}
+        />
+
+*/

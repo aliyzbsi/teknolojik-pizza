@@ -3,7 +3,13 @@ import Select from "react-select";
 
 const errorMessage = "Lütfen hamur tipi seçin!";
 
-function DoughType({ hamurOptions, hamurType, setHamurType, error, setError }) {
+function DoughType({
+  hamurOptions = [],
+  hamurType,
+  setHamurType,
+  error,
+  setError,
+}) {
   const options = hamurOptions.map((option) => ({
     value: option,
     label: option,
@@ -27,12 +33,12 @@ function DoughType({ hamurOptions, hamurType, setHamurType, error, setError }) {
         hamurTypeHata: "",
       }));
     }
-  }, [hamurOptions, setError, hamurType]);
+  }, [hamurType, setError]);
 
   return (
     <div className="flex flex-col items-center gap-6">
       <section className="flex justify-center mt-4">
-        <div className="flex flex-col  gap-4">
+        <div className="flex flex-col gap-4">
           <h1 className="font-semibold text-lg">
             Hamur Seç <span className="text-red-600">*</span>
           </h1>

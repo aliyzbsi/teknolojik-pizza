@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const errorMessage = "Lütfen bir boyut seçin!";
 
 function PizzaSizes({
-  pizzaSizes,
+  pizzaSizes = [], // Başlangıçta boş bir dizi olarak tanımlıyoruz
   selectedSize,
   setSelectedSize,
   error,
@@ -35,19 +35,21 @@ function PizzaSizes({
             Boyut Seç <span className="text-red-600">*</span>
           </h1>
           <div className="flex flex-col items-center md:flex-row gap-4">
-            {" "}
-            {/* Mobilde alt alta, büyük ekranda yan yana */}
-            {pizzaSizes.map((item, index) => (
-              <button
-                key={index}
-                className={`flex items-center bg-mainBgColor text-black font-mono text-lg border-0 rounded-3xl py-2 px-3 cursor-pointer shadow-md relative ${
-                  selectedSize === item ? "bg-selectedColor text-black" : ""
-                }`}
-                onClick={() => handleSizeSelect(item)}
-              >
-                <span>{item}</span>
-              </button>
-            ))}
+            {Array.isArray(pizzaSizes) && pizzaSizes.length > 0 ? (
+              pizzaSizes.map((item, index) => (
+                <button
+                  key={index}
+                  className={`flex items-center bg-mainBgColor text-black font-mono text-lg border-0 rounded-3xl py-2 px-3 cursor-pointer shadow-md relative ${
+                    selectedSize === item ? "bg-selectedColor text-black" : ""
+                  }`}
+                  onClick={() => handleSizeSelect(item)}
+                >
+                  <span>{item}</span>
+                </button>
+              ))
+            ) : (
+              <p className="text-red-600">Boyutlar yükleniyor...</p>
+            )}
           </div>
           {error.sizeHata && <p className="text-red-600">{error.sizeHata}</p>}
         </div>
