@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
+import logo from "../../../../public/assets/Iteration-1-assets/logo.svg";
 
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
@@ -31,7 +32,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
       >
         <div className="flex flex-col items-center p-6 md:p-10 lg:p-20 ">
           <img
-            src="/Iteration-1-assets/logo.svg"
+            src={logo}
             alt="home-page-logo"
             className="w-52 md:w-48 lg:w-64"
           />
