@@ -1,4 +1,4 @@
-import logo from "../../../Assets/Iteration-1-assets/logo.svg";
+import logo from "../../../public/assets/Iteration-1-assets/logo.svg";
 function Header() {
   return (
     <div className="w-[100vw] flex justify-center bg-mainColor p-10">

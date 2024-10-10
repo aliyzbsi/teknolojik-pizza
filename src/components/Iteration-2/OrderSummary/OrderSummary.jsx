@@ -57,7 +57,7 @@ function OrderSummary() {
                   </span>
                 </p>
                 <p className="flex justify-between">
-                  Toplam <span>{orderForm.fiyat.toFixed(2)}₺</span>
+                  Toplam <span>{orderForm.fiyat}₺</span>
                 </p>
               </div>
             </div>

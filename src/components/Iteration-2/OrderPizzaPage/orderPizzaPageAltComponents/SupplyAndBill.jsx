@@ -35,7 +35,7 @@ function SupplyAndBill({
 
   return (
     <div>
-      <section className="flex flex-col items-center gap-10 font-barlow mt-8">
+      <section className="flex flex-col items-center gap-10 font-barlow mt-8 p-4">
         <div className="flex flex-col sm:flex-row items-start gap-4 mt-4 md:justify-center lg:w-144 ">
           <div className="flex-1 flex items-center gap-3">
             <button

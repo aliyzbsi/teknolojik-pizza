@@ -1,5 +1,8 @@
 import React from "react";
 
+import lezzetus from "../../../../../public/assets/Iteration-2-assets/cta/kart-1.png";
+import hackat from "../../../../../public/assets/Iteration-2-assets/cta/kart-2.png";
+import npmkurye from "../../../../../public/assets/Iteration-2-assets/cta/kart-3.png";
 function Recommended() {
   return (
     <div>
@@ -8,7 +11,7 @@ function Recommended() {
           <div className="flex flex-col md:flex-row justify-center gap-4 p-4">
             <div className="relative">
               <img
-                src="/Iteration-2-assets/cta/kart-1.png"
+                src={lezzetus}
                 className="rounded-2xl w-full md:w-80 lg:w-128"
                 alt="ozel-lezzetus"
               />
@@ -27,7 +30,7 @@ function Recommended() {
             <div className="flex flex-col gap-3">
               <div className="relative">
                 <img
-                  src="/Iteration-2-assets/cta/kart-2.png"
+                  src={hackat}
                   className="rounded-2xl w-full md:w-80 lg:w-128"
                   alt="hackathlon-menu"
                 />
@@ -43,7 +46,7 @@ function Recommended() {
               </div>
               <div className="relative">
                 <img
-                  src="/Iteration-2-assets/cta/kart-3.png"
+                  src={npmkurye}
                   className="rounded-2xl w-full md:w-80 lg:w-128"
                   alt="npm-gibi-kurye"
                 />
