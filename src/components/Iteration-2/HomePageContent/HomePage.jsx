@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
-import logo from "../../../../public/Iteration-1-assets/logo.svg";
 
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
@@ -27,12 +26,12 @@ function HomePage({ pizzaData, getAllPizzas }) {
       <section
         className="bg-center bg-cover bg-no-repeat h-full"
         style={{
-          backgroundImage: `url("/Iteration-1-assets/home-banner.png")`,
+          backgroundImage: "url('/Iteration-1-assets/home-banner.png')",
         }}
       >
         <div className="flex flex-col items-center p-6 md:p-10 lg:p-20 ">
           <img
-            src={logo}
+            src="/Iteration-1-assets/logo.svg"
             alt="home-page-logo"
             className="w-52 md:w-48 lg:w-64"
           />
@@ -64,7 +63,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="../../../../public/Iteration-2-aseets/icons/1.svg"
+                src="/Iteration-2-aseets/icons/1.svg"
                 alt="ramen"
                 className="w-6 h-6"
               />
@@ -75,7 +74,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="../../../../public/Iteration-2-aseets/icons/2.svg"
+                src="/Iteration-2-aseets/icons/2.svg"
                 alt="pizza"
                 className="w-6 h-6"
               />
