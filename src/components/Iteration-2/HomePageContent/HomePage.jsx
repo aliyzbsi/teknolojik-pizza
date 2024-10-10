@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
-import "../../../../Assets/Iteration-1-assets/logo.svg";
+import background from "../../../../Assets/Iteration-1-assets/home-banner.png";
+import logo from "../../../../Assets/Iteration-1-assets/logo.svg";
 
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
@@ -27,13 +28,12 @@ function HomePage({ pizzaData, getAllPizzas }) {
       <section
         className="bg-center bg-cover bg-no-repeat h-full"
         style={{
-          backgroundImage:
-            "url('../../../../Assets/Iteration-1-assets/home-banner.png')",
+          backgroundImage: `url(${background})`,
         }}
       >
         <div className="flex flex-col items-center p-6 md:p-10 lg:p-20 ">
           <img
-            src="../../../../Assets/Iteration-1-assets/logo.svg"
+            src={logo}
             alt="home-page-logo"
             className="w-52 md:w-48 lg:w-64"
           />
