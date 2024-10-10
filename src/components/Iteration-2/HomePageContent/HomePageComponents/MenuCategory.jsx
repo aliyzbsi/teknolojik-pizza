@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
 
+const images = {
+  image1: "../../../../../public/assets/Iteration-2-assets/pictures/ramen1.png",
+  image2: "../../../../../public/assets/Iteration-2-assets/pictures/ramen2.png",
+  image3: "../../../../../public/assets/Iteration-2-assets/pictures/ramen3.png",
+};
+
 function MenuCategory({ menuItems }) {
   return (
     <div>
@@ -12,7 +18,7 @@ function MenuCategory({ menuItems }) {
                 className="flex flex-col justify-between bg-white rounded-2xl w-full min-w-[18rem] max-w-[22rem] h-[28rem] p-4 gap-4"
               >
                 <img
-                  src={item.image}
+                  src={images[item.imageKey]}
                   className="w-full h-auto max-h-[20rem] object-cover"
                   alt={item.name}
                 />
