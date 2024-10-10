@@ -32,6 +32,7 @@ function OrderMain() {
   const [hamurType, setHamurType] = useState("");
   const [selectedMalzemeler, setSelectedMalzemeler] = useState([]);
   const [adet, setAdet] = useState(1);
+  const [eklenenMalzemeSayisi, setEklenenMalzemeSayisi] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
@@ -84,6 +85,7 @@ function OrderMain() {
       siparisNotu: orderNote,
       fiyat: totalPrice,
       adet: adet,
+      eklenenMalzemeSayisi: eklenenMalzemeSayisi,
     };
 
     try {
@@ -159,6 +161,8 @@ function OrderMain() {
           setTotalPrice={setTotalPrice}
           selectedMalzemeler={selectedMalzemeler}
           handleSubmit={handleSubmit}
+          eklenenMalzemeSayisi={eklenenMalzemeSayisi}
+          setEklenenMalzemeSayisi={setEklenenMalzemeSayisi}
         />
       </Form>
       <ToastContainer />

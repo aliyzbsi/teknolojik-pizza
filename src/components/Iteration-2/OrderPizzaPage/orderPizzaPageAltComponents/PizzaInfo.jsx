@@ -39,9 +39,9 @@ function PizzaInfo({ selectedPizzaData }) {
   };
   return (
     <div>
-      <section className="flex flex-col items-center bg-mainBgColor gap-10 font-barlow">
+      <section className="flex flex-col items-center bg-mainBgColor gap-10 font-barlow ">
         <img src={productImage} alt="" />
-        <div className="flex lg:w-144">
+        <div className="flex lg:w-144 px-4">
           <nav>
             <button
               className="hover:text-red-600"
@@ -55,7 +55,7 @@ function PizzaInfo({ selectedPizzaData }) {
               data-cy="siparisOlusturRouter"
               onClick={handleSiparis}
               className={`text-red-600 ${
-                isOrderPage ? "opacity-50 cursor-not-allowed" : ""
+                isOrderPage ? " cursor-not-allowed" : ""
               }`}
               disabled={isOrderPage}
             >
@@ -63,8 +63,8 @@ function PizzaInfo({ selectedPizzaData }) {
             </button>
           </nav>
         </div>
-        <article className="flex flex-col lg:w-144 mb-4">
-          <div className="flex flex-col gap-4">
+        <article className="flex flex-col lg:w-144 mb-4 ">
+          <div className="flex flex-col gap-4 px-4  ">
             <h1 className="font-semibold text-xl">{selectedPizzaData.isim}</h1>
             <div className="flex justify-between">
               <p className="font-bold text-xl">{selectedPizzaData.fiyat}₺</p>

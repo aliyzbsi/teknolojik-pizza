@@ -4,8 +4,7 @@ import { FaTwitter } from "react-icons/fa6";
 function Footer() {
   return (
     <div className="bg-black w-full">
-      <section className="flex flex-col lg:flex-row font-barlow items-start justify-center text-white gap-10 p-8 mt-8">
-        {/* Logo ve Adres Bölümü */}
+      <section className="flex flex-col lg:flex-row font-barlow items-start justify-center text-white gap-10 p-8 ">
         <article className="flex flex-col items-start gap-10 text-center lg:text-left">
           <img
             src="../../../Assets/Iteration-2-aseets/footer/logo-footer.svg"
@@ -44,7 +43,6 @@ function Footer() {
           </address>
         </article>
 
-        {/* Hot Menu Bölümü */}
         <article className="flex flex-col gap-4 items-start lg:items-start">
           <h1 className="font-bold text-lg">Hot Menu</h1>
           <ul className="flex flex-col gap-2">
@@ -57,7 +55,6 @@ function Footer() {
           </ul>
         </article>
 
-        {/* Instagram Bölümü */}
         <article className="flex flex-col gap-4 items-start lg:items-start">
           <h1 className="font-semibold">Instagram</h1>
           <div className="grid grid-cols-3 gap-2">

@@ -14,16 +14,16 @@ function SupplyAndBill({
   consumerName,
   selectedSize,
   hamurType,
+  eklenenMalzemeSayisi,
+  setEklenenMalzemeSayisi,
 }) {
-  const [eklenenMalzemeSayisi, setEklenenMalzemeSayisi] = useState(0);
-
   useEffect(() => {
     const selectedCount = selectedMalzemeler.filter(
       (item) => !varsayilanMalzemeler.includes(item)
     ).length;
 
     setEklenenMalzemeSayisi(selectedCount);
-    const bill = adet * price + selectedCount * 5;
+    const bill = (adet * price + selectedCount * 5).toFixed(2);
     setTotalPrice(bill);
   }, [adet, varsayilanMalzemeler, selectedMalzemeler, price]);
 
@@ -66,7 +66,7 @@ function SupplyAndBill({
                   <div className="flex justify-between w-full">
                     <p className="text-lg font-medium">Seçimler</p>
                     <p className="text-lg font-medium">
-                      {eklenenMalzemeSayisi * 5}₺
+                      {(eklenenMalzemeSayisi * 5).toFixed(2)}₺
                     </p>
                   </div>
                   <div className="text-red-700 flex justify-between w-full font-bold">

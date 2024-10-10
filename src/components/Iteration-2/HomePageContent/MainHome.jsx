@@ -17,7 +17,7 @@ function MainHome() {
     }
   };
   return (
-    <div>
+    <div className="bg-mainBgColor">
       <HomePage pizzaData={pizzaData} getAllPizzas={getAllPizzas} />
       <Recommended />
       <ClassifiedCategories />
