@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import productImage from "../../../../../Assets/Iteration-2-aseets/pictures/form-banner.png";
+import productImage from "../../../../../Assets/Iteration-2-assets/pictures/form-banner.png";
 import { toast } from "react-toastify";
 function PizzaInfo({ selectedPizzaData }) {
   if (!selectedPizzaData) {

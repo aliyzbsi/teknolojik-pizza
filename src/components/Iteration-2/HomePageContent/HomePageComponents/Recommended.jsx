@@ -8,7 +8,7 @@ function Recommended() {
           <div className="flex flex-col md:flex-row justify-center gap-4 p-4">
             <div className="relative">
               <img
-                src="/Iteration-2-aseets/cta/kart-1.png"
+                src="/Iteration-2-assets/cta/kart-1.png"
                 className="rounded-2xl w-full md:w-80 lg:w-128"
                 alt="ozel-lezzetus"
               />
@@ -27,7 +27,7 @@ function Recommended() {
             <div className="flex flex-col gap-3">
               <div className="relative">
                 <img
-                  src="/Iteration-2-aseets/cta/kart-2.png"
+                  src="/Iteration-2-assets/cta/kart-2.png"
                   className="rounded-2xl w-full md:w-80 lg:w-128"
                   alt="hackathlon-menu"
                 />
@@ -43,7 +43,7 @@ function Recommended() {
               </div>
               <div className="relative">
                 <img
-                  src="/Iteration-2-aseets/cta/kart-3.png"
+                  src="/Iteration-2-assets/cta/kart-3.png"
                   className="rounded-2xl w-full md:w-80 lg:w-128"
                   alt="npm-gibi-kurye"
                 />

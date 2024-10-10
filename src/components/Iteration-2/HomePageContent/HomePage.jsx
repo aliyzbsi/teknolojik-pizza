@@ -63,7 +63,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="/Iteration-2-aseets/icons/1.svg"
+                src="/Iteration-2-assets/icons/1.svg"
                 alt="ramen"
                 className="w-6 h-6"
               />
@@ -74,7 +74,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="/Iteration-2-aseets/icons/2.svg"
+                src="/Iteration-2-assets/icons/2.svg"
                 alt="pizza"
                 className="w-6 h-6"
               />
@@ -85,7 +85,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="Assets/Iteration-2-aseets/icons/3.svg"
+                src="Assets/Iteration-2-assets/icons/3.svg"
                 alt="burger"
                 className="w-6 h-6"
               />
@@ -96,7 +96,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="Assets/Iteration-2-aseets/icons/4.svg"
+                src="Assets/Iteration-2-assets/icons/4.svg"
                 alt="kızartmalar"
                 className="w-6 h-6"
               />
@@ -107,7 +107,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="Assets/Iteration-2-aseets/icons/5.svg"
+                src="Assets/Iteration-2-assets/icons/5.svg"
                 alt="fast food"
                 className="w-6 h-6"
               />
@@ -118,7 +118,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
               className="flex items-center space-x-2 hover:text-red-600 transition duration-200"
             >
               <img
-                src="Assets/Iteration-2-aseets/icons/6.svg"
+                src="Assets/Iteration-2-assets/icons/6.svg"
                 alt="gazlı içecek"
                 className="w-6 h-6"
               />
