@@ -5,7 +5,7 @@
       "category": "Ramen",
       "name": "Spicy Vegan Ramen",
       "description": "Delicious vegan ramen",
-      "imageKey": "image1",
+      "image": "public/assets/Iteration-2-assets/pictures/ramen1.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -15,7 +15,7 @@
       "category": "Ramen",
       "name": "Miso Ramen Delight",
       "description": "Rich miso ramen with a twist",
-      "imageKey": "image2",
+      "image": "public/assets/Iteration-2-assets/pictures/ramen2.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -25,7 +25,7 @@
       "category": "Ramen",
       "name": "Shoyu Ramen Special",
       "description": "Traditional Japanese Shoyu Ramen",
-      "image": "image3",
+      "image": "public/assets/Iteration-2-assets/pictures/ramen3.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -35,7 +35,7 @@
       "category": "Pizza",
       "name": "Pepperoni Fire Pizza",
       "description": "Spicy pepperoni pizza",
-      "image": "image4",
+      "image": "public/assets/Iteration-2-assets/pictures/food-1.png",
       "rating": 4.5,
       "ordersCount": 120,
       "price": 129.9
@@ -45,7 +45,7 @@
       "category": "Pizza",
       "name": "Margherita Classic",
       "description": "Classic Margherita pizza",
-      "image": "image5",
+      "image": "public/assets/Iteration-2-assets/pictures/food-2.png",
       "rating": 4.7,
       "ordersCount": 85,
       "price": 600
@@ -55,7 +55,7 @@
       "category": "Pizza",
       "name": "BBQ Chicken Special",
       "description": "Classic BBQ chicken pizza",
-      "image": "image6",
+      "image": "public/assets/Iteration-2-assets/pictures/pizza3.png",
       "rating": 4.6,
       "ordersCount": 150,
       "price": 600
@@ -65,7 +65,7 @@
       "category": "Burger",
       "name": "Vegan Delight Burger",
       "description": "Delicious vegan burger",
-      "image": "image7",
+      "image": "public/assets/Iteration-2-assets/pictures/food-3.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -75,7 +75,7 @@
       "category": "Burger",
       "name": "BBQ Beef Burger",
       "description": "Delicious BBQ beef burger",
-      "image": "image8",
+      "image": "public/assets/Iteration-2-assets/pictures/burger1.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -85,7 +85,7 @@
       "category": "Burger",
       "name": "Classic Cheeseburger",
       "description": "Classic cheeseburger",
-      "image": "image9",
+      "image": "public/assets/Iteration-2-assets/pictures/burger2.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -95,7 +95,7 @@
       "category": "French fries",
       "name": "Crispy Fries",
       "description": "Delicious crispy fries",
-      "image": "image10",
+      "image": "public/assets/Iteration-2-assets/pictures/pk1.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -105,7 +105,7 @@
       "category": "French fries",
       "name": "Cheesy Fries",
       "description": "Delicious cheesy fries",
-      "image": "image11",
+      "image": "public/assets/Iteration-2-assets/pictures/pk2.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -115,7 +115,7 @@
       "category": "French fries",
       "name": "Garlic Butter Fries",
       "description": "Delicious garlic butter fries",
-      "image": "image12",
+      "image": "public/assets/Iteration-2-assets/pictures/pk3.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -125,7 +125,7 @@
       "category": "Fast Food",
       "name": "Vegan Delight Burger",
       "description": "Delicious vegan burger",
-      "image": "image13",
+      "image": "public/assets/Iteration-2-assets/pictures/food-3.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -135,7 +135,7 @@
       "category": "Fast Food",
       "name": "Spicy Beef Burger",
       "description": "Delicious spicy beef burger",
-      "image": "image14",
+      "image": "public/assets/Iteration-2-assets/pictures/food-1.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -145,7 +145,7 @@
       "category": "Fast Food",
       "name": "Grilled Chicken Burger",
       "description": "Grilled chicken burger with sauce",
-      "image": "image15",
+      "image": "public/assets/Iteration-2-assets/pictures/food-2.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -155,7 +155,7 @@
       "category": "Soft drinks",
       "name": "Sparkling Water",
       "description": "Refreshing sparkling water",
-      "image": "image16",
+      "image": "public/assets/Iteration-2-assets/pictures/sd1.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -165,7 +165,7 @@
       "category": "Soft drinks",
       "name": "Cola",
       "description": "Classic cola drink",
-      "image": "image17",
+      "image": "public/assets/Iteration-2-assets/pictures/sd2.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
@@ -175,7 +175,7 @@
       "category": "Soft drinks",
       "name": "Lemonade",
       "description": "Freshly squeezed lemonade",
-      "image": "image18",
+      "image": "public/assets/Iteration-2-assets/pictures/sd3.png",
       "rating": 4.8,
       "ordersCount": 70,
       "price": 99.9
