@@ -44,6 +44,7 @@ function PizzaInfo({ selectedPizzaData }) {
         <div className="flex lg:w-144 px-4">
           <nav>
             <button
+              type="button"
               className="hover:text-red-600"
               data-cy="anasayfaRouter"
               onClick={handleAnasayfa}

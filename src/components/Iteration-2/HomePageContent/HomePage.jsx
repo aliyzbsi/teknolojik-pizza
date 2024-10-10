@@ -52,6 +52,7 @@ function HomePage({ pizzaData, getAllPizzas }) {
           </div>
           <div>
             <button
+              type="button"
               onClick={orderPageRouter}
               className="rounded-full font-barlow font-medium bg-yellow-400 py-2 px-6 md:px-10 lg:px-12 md:py-2.5 hover:bg-red-700 hover:text-white transition-all duration-300"
             >
