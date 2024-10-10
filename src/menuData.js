@@ -1,10 +1,14 @@
+import image1 from "../public/assets/Iteration-2-assets/pictures/ramen1.png";
+import image2 from "../public/assets/Iteration-2-assets/pictures/ramen2.png";
+import image3 from "../public/assets/Iteration-2-assets/pictures/ramen3.png";
+
 const menuItems = [
   {
     id: 1,
     category: "Ramen",
     name: "Spicy Vegan Ramen",
     description: "Delicious vegan ramen",
-    image: "../public/assets/Iteration-2-assets/pictures/ramen1.png",
+    image: `${image1}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -14,7 +18,7 @@ const menuItems = [
     category: "Ramen",
     name: "Miso Ramen Delight",
     description: "Rich miso ramen with a twist",
-    image: "../public/assets/Iteration-2-assets/pictures/ramen2.png",
+    image: `${image2}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -24,7 +28,7 @@ const menuItems = [
     category: "Ramen",
     name: "Shoyu Ramen Special",
     description: "Traditional Japanese Shoyu Ramen",
-    image: "../public/assets/Iteration-2-assets/pictures/ramen3.png",
+    image: `${image3}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
