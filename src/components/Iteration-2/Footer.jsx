@@ -10,6 +10,7 @@ import insta3 from "../../../public/assets/Iteration-2-assets/footer/insta/li-2.
 import insta4 from "../../../public/assets/Iteration-2-assets/footer/insta/li-3.png";
 import insta5 from "../../../public/assets/Iteration-2-assets/footer/insta/li-4.png";
 import insta6 from "../../../public/assets/Iteration-2-assets/footer/insta/li-5.png";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 function Footer() {
   return (
     <div className="bg-black w-full ">
@@ -49,7 +50,7 @@ function Footer() {
         </article>
 
         <article className="flex flex-col gap-4 items-start lg:items-start">
-          <h1 className="font-semibold">Instagram</h1>
+          <a href="https://www.instagram.com/aliyzbsi/">Instagram</a>
           <div className="grid grid-cols-3 gap-2">
             <img src={insta1} alt="insta-0" />
             <img src={insta2} alt="insta-1" />
