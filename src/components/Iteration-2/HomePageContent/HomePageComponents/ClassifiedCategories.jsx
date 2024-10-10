@@ -10,12 +10,14 @@ import icon4 from "../../../../../public/assets/Iteration-2-assets/icons/4.svg";
 import icon5 from "../../../../../public/assets/Iteration-2-assets/icons/5.svg";
 import icon6 from "../../../../../public/assets/Iteration-2-assets/icons/6.svg";
 
+import data from "../../../../menuData";
+
 function ClassifiedCategories() {
   const [menuItems, setMenuItems] = useState([]);
   const [activeCategory, setActiveCategory] = useState("Pizza");
 
   const getMenuItems = async (category) => {
-    try {
+    /* try {
       const response = await axios.get("http://localhost:3000/menuItems");
       const filteredItems = response.data.filter(
         (item) => item.category === category
@@ -24,7 +26,10 @@ function ClassifiedCategories() {
       setActiveCategory(category);
     } catch (error) {
       console.error("Veri alınırken hata oluştu:", error);
-    }
+    } */
+    const filteredData = data.filter((item) => item.category === category);
+    setMenuItems(filteredData);
+    setActiveCategory(category);
   };
   useEffect(() => {
     getMenuItems(activeCategory);
