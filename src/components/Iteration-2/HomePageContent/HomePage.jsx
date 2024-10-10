@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
-import background from "../../../../Assets/Iteration-1-assets/home-banner.png";
+import background from "../../../assets/Iteration-1-assets/home-banner.png";
 import logo from "../../../../Assets/Iteration-1-assets/logo.svg";
 
 function HomePage({ pizzaData, getAllPizzas }) {
