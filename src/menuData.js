@@ -1,6 +1,21 @@
 import image1 from "../public/assets/Iteration-2-assets/pictures/ramen1.png";
 import image2 from "../public/assets/Iteration-2-assets/pictures/ramen2.png";
 import image3 from "../public/assets/Iteration-2-assets/pictures/ramen3.png";
+import image4 from "../public/assets/Iteration-2-assets/pictures/food-1.png";
+import image5 from "../public/assets/Iteration-2-assets/pictures/food-2.png";
+import image6 from "../public/assets/Iteration-2-assets/pictures/pizza3.png";
+import image7 from "../public/assets/Iteration-2-assets/pictures/burger1.png";
+import image8 from "../public/assets/Iteration-2-assets/pictures/burger2.png";
+import image9 from "../public/assets/Iteration-2-assets/pictures/food-3.png";
+import image10 from "../public/assets/Iteration-2-assets/pictures/pk1.png";
+import image11 from "../public/assets/Iteration-2-assets/pictures/pk2.png";
+import image12 from "../public/assets/Iteration-2-assets/pictures/pk3.png";
+import image13 from "../public/assets/Iteration-2-assets/pictures/food-1.png";
+import image14 from "../public/assets/Iteration-2-assets/pictures/food-3.png";
+import image15 from "../public/assets/Iteration-2-assets/pictures/ramen3.png";
+import image16 from "../public/assets/Iteration-2-assets/pictures/sd1.png";
+import image17 from "../public/assets/Iteration-2-assets/pictures/sd2.png";
+import image18 from "../public/assets/Iteration-2-assets/pictures/sd3.png";
 
 const menuItems = [
   {
@@ -38,7 +53,7 @@ const menuItems = [
     category: "Pizza",
     name: "Pepperoni Fire Pizza",
     description: "Spicy pepperoni pizza",
-    image: "../public/assets/Iteration-2-assets/pictures/food-1.png",
+    image: `${image4}`,
     rating: 4.5,
     ordersCount: 120,
     price: 129.9,
@@ -48,7 +63,7 @@ const menuItems = [
     category: "Pizza",
     name: "Margherita Classic",
     description: "Classic Margherita pizza",
-    image: "../public/assets/Iteration-2-assets/pictures/food-2.png",
+    image: `${image5}`,
     rating: 4.7,
     ordersCount: 85,
     price: 600,
@@ -58,7 +73,7 @@ const menuItems = [
     category: "Pizza",
     name: "BBQ Chicken Special",
     description: "Classic BBQ chicken pizza",
-    image: "../public/assets/Iteration-2-assets/pictures/pizza3.png",
+    image: `${image6}`,
     rating: 4.6,
     ordersCount: 150,
     price: 600,
@@ -68,7 +83,7 @@ const menuItems = [
     category: "Burger",
     name: "Vegan Delight Burger",
     description: "Delicious vegan burger",
-    image: "../public/assets/Iteration-2-assets/pictures/food-3.png",
+    image: `${image7}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -78,7 +93,7 @@ const menuItems = [
     category: "Burger",
     name: "BBQ Beef Burger",
     description: "Delicious BBQ beef burger",
-    image: "../public/assets/Iteration-2-assets/pictures/burger1.png",
+    image: `${image8}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -88,7 +103,7 @@ const menuItems = [
     category: "Burger",
     name: "Classic Cheeseburger",
     description: "Classic cheeseburger",
-    image: "../public/assets/Iteration-2-assets/pictures/burger2.png",
+    image: `${image9}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -98,7 +113,7 @@ const menuItems = [
     category: "French fries",
     name: "Crispy Fries",
     description: "Delicious crispy fries",
-    image: "../public/assets/Iteration-2-assets/pictures/pk1.png",
+    image: `${image10}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -108,7 +123,7 @@ const menuItems = [
     category: "French fries",
     name: "Cheesy Fries",
     description: "Delicious cheesy fries",
-    image: "../public/assets/Iteration-2-assets/pictures/pk2.png",
+    image: `${image11}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -118,7 +133,7 @@ const menuItems = [
     category: "French fries",
     name: "Garlic Butter Fries",
     description: "Delicious garlic butter fries",
-    image: "../public/assets/Iteration-2-assets/pictures/pk3.png",
+    image: `${image12}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -128,7 +143,7 @@ const menuItems = [
     category: "Fast Food",
     name: "Vegan Delight Burger",
     description: "Delicious vegan burger",
-    image: "../public/assets/Iteration-2-assets/pictures/food-3.png",
+    image: `${image13}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -138,7 +153,7 @@ const menuItems = [
     category: "Fast Food",
     name: "Spicy Beef Burger",
     description: "Delicious spicy beef burger",
-    image: "../public/assets/Iteration-2-assets/pictures/food-1.png",
+    image: `${image14}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -148,7 +163,7 @@ const menuItems = [
     category: "Fast Food",
     name: "Grilled Chicken Burger",
     description: "Grilled chicken burger with sauce",
-    image: "../public/assets/Iteration-2-assets/pictures/food-2.png",
+    image: `${image15}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -158,7 +173,7 @@ const menuItems = [
     category: "Soft drinks",
     name: "Sparkling Water",
     description: "Refreshing sparkling water",
-    image: "../public/assets/Iteration-2-assets/pictures/sd1.png",
+    image: `${image16}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -168,7 +183,7 @@ const menuItems = [
     category: "Soft drinks",
     name: "Cola",
     description: "Classic cola drink",
-    image: "../public/assets/Iteration-2-assets/pictures/sd2.png",
+    image: `${image17}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
@@ -178,7 +193,7 @@ const menuItems = [
     category: "Soft drinks",
     name: "Lemonade",
     description: "Freshly squeezed lemonade",
-    image: "../public/assets/Iteration-2-assets/pictures/sd3.png",
+    image: `${image18}`,
     rating: 4.8,
     ordersCount: 70,
     price: 99.9,
