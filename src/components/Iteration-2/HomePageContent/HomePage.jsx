@@ -26,7 +26,8 @@ function HomePage({ pizzaData, getAllPizzas }) {
       <section
         className="bg-center bg-cover bg-no-repeat h-full"
         style={{
-          backgroundImage: "url('/Iteration-1-assets/home-banner.png')",
+          backgroundImage:
+            "url('/Users/aliyzbsi/git/teknolojik-pizza/Assets/Iteration-1-assets/home-banner.png')",
         }}
       >
         <div className="flex flex-col items-center p-6 md:p-10 lg:p-20 ">
