@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { toast, ToastContainer } from "react-toastify";
 import logo from "../../../../public/Iteration-1-assets/logo.svg";
-import icon1 from "../../../../public/Iteration-2-assets/icons/1.svg";
-import icon2 from "../../../../public/Iteration-2-assets/icons/2.svg";
+import icon1 from "../../../../public/Iteration-2-aseets/icons/1.svg";
+import icon2 from "../../../../public/Iteration-2-aseets/icons/2.svg";
 function HomePage({ pizzaData, getAllPizzas }) {
   const history = useHistory();
 
