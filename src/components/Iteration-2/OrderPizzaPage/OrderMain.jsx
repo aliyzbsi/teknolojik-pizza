@@ -35,18 +35,6 @@ function OrderMain() {
   const [eklenenMalzemeSayisi, setEklenenMalzemeSayisi] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const [orderForm, setOrderForm] = useState({
-    consumerName: "",
-    orderNote: "",
-    pizzaData: pizzas.find((pizza) => pizza.id === pizzaId), // Yerel pizza verisinden alınıyor
-    selectedSize: "",
-    hamurType: "",
-    selectedMalzemeler: [],
-    adet: 1,
-    eklenenMalzemeSayisi: 0,
-    totalPrice: 0,
-  });
-
   /* useEffect(() => {
     const fetchPizzaData = async () => {
       try {

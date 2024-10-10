@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const errorMessage = "Lütfen bir boyut seçin!";
 
 function PizzaSizes({
-  pizzaSizes = [], // Başlangıçta boş bir dizi olarak tanımlıyoruz
+  pizzaSizes = [],
   selectedSize,
   setSelectedSize,
   error,
@@ -38,6 +38,7 @@ function PizzaSizes({
             {Array.isArray(pizzaSizes) && pizzaSizes.length > 0 ? (
               pizzaSizes.map((item, index) => (
                 <button
+                  type="button"
                   key={index}
                   className={`flex items-center bg-mainBgColor text-black font-mono text-lg border-0 rounded-3xl py-2 px-3 cursor-pointer shadow-md relative ${
                     selectedSize === item ? "bg-selectedColor text-black" : ""
