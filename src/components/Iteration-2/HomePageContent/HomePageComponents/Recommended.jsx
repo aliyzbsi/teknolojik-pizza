@@ -3,7 +3,9 @@ import React from "react";
 import lezzetus from "../../../../../public/assets/Iteration-2-assets/cta/kart-1.png";
 import hackat from "../../../../../public/assets/Iteration-2-assets/cta/kart-2.png";
 import npmkurye from "../../../../../public/assets/Iteration-2-assets/cta/kart-3.png";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 function Recommended() {
+  const history = useHistory();
   return (
     <div>
       <div>
@@ -22,7 +24,10 @@ function Recommended() {
                 <p className="font-barlow text-white text-left text-xs md:text-sm lg:text-base font-bold break-words">
                   Position: Absolute Acı Burger
                 </p>
-                <button className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4 mt-2">
+                <button
+                  className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4 mt-2"
+                  onClick={() => history.push("/order/1")}
+                >
                   Sipariş Ver
                 </button>
               </div>
@@ -39,7 +44,10 @@ function Recommended() {
                     Hackathlon <br />
                     Burger Menü
                   </h1>
-                  <button className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4">
+                  <button
+                    className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4"
+                    onClick={() => history.push("/order/3")}
+                  >
                     Sipariş Ver
                   </button>
                 </div>
@@ -55,7 +63,10 @@ function Recommended() {
                     <span className="text-red-700">Çoooook</span> hızlı <br />
                     npm gibi kurye
                   </h1>
-                  <button className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4 mt-2">
+                  <button
+                    className="font-barlow bg-white text-red-700 hover:text-blue-700 rounded-3xl p-2 px-4 mt-2"
+                    onClick={() => history.push("/order/2")}
+                  >
                     Sipariş Ver
                   </button>
                 </div>

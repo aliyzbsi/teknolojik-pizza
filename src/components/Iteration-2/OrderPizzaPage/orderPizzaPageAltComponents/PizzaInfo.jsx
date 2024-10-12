@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import productImage from "../../../../../public/assets/Iteration-2-assets/pictures/form-banner.png";
+
 import { toast } from "react-toastify";
 function PizzaInfo({ selectedPizzaData }) {
   if (!selectedPizzaData) {
@@ -40,7 +40,7 @@ function PizzaInfo({ selectedPizzaData }) {
   return (
     <div>
       <section className="flex flex-col items-center bg-mainBgColor gap-10 font-barlow ">
-        <img src={productImage} alt="" />
+        <img src={selectedPizzaData.image} alt="" />
         <div className="flex lg:w-144 px-4">
           <nav>
             <button
