@@ -28,7 +28,7 @@ function Footer() {
             </div>
             <div className="flex gap-2 items-center">
               <img src={ficon2} alt="mail" className="h-8 lg:h-8" />
-              <span>aciktim@teknolojikyemekler.com</span>
+              <span>aliyzbsi68@hotmail.com</span>
             </div>
             <div className="flex gap-2 items-center">
               <img src={ficon3} alt="phone" className="h-8 lg:h-8" />

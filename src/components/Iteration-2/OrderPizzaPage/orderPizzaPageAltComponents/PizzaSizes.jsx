@@ -34,6 +34,9 @@ function PizzaSizes({
           <h1 className="font-semibold text-lg">
             Boyut Seç <span className="text-red-600">*</span>
           </h1>
+          <p className="font-semibold text-center text-red-600">
+            S=0₺ M=+20₺ L=+40₺
+          </p>
           <div className="flex flex-col items-center md:flex-row gap-4">
             {Array.isArray(pizzaSizes) && pizzaSizes.length > 0 ? (
               pizzaSizes.map((item, index) => (
